@@ -21,7 +21,7 @@ const MEMBERS = [
     email:     'mailto:#',
     // To use a real photo, replace the placeholder below with the image path or URL.
     // Example: photo: 'photos/mark.jpg'
-    photo:     null,
+    photo:     'img/dwayne.png',
     avatarSeed:'Mark+Dela+Cruz',
   },
   {
