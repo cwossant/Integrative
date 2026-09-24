@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SYNCRA — National University Manila</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+</head>
+<body data-theme="cyan">
+
+  <!-- Particle Canvas Background -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- Scanline Overlay -->
+  <div class="scanlines"></div>
+
+  <!-- Noise Overlay -->
+  <div class="noise"></div>
+
+  <!-- Theme Switcher -->
+  <div class="theme-switcher" id="themeSwitcher">
+    <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle theme panel">
+      <span class="theme-icon">◈</span>
+    </button>
+    <div class="theme-panel" id="themePanel">
+      <p class="theme-label">THEME</p>
+      <button class="theme-btn active" data-theme="cyan" title="Neon Cyan">
+        <span class="swatch" style="background:#00f0ff"></span>CYAN
+      </button>
+      <button class="theme-btn" data-theme="purple" title="Neon Purple">
+        <span class="swatch" style="background:#bf00ff"></span>PURPLE
+      </button>
+      <button class="theme-btn" data-theme="green" title="Matrix Green">
+        <span class="swatch" style="background:#00ff41"></span>GREEN
+      </button>
+      <button class="theme-btn" data-theme="red" title="Danger Red">
+        <span class="swatch" style="background:#ff003c"></span>RED
+      </button>
+      <button class="theme-btn" data-theme="gold" title="Solar Gold">
+        <span class="swatch" style="background:#ffd700"></span>GOLD
+      </button>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-grid-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-badge">◈ NATIONAL UNIVERSITY MANILA ◈</div>
+      <h1 class="hero-title">
+        <span class="glitch" data-text="SYNCRA">SYNCRA</span>
+      </h1>
+      <div class="hero-subtitle">
+        <span class="typing-text" id="typingText"></span>
+        <span class="cursor">|</span>
+      </div>
+      <div class="hero-divider">
+        <span class="line"></span>
+        <span class="diamond">◆</span>
+        <span class="line"></span>
+      </div>
+      <p class="hero-desc">Capstone Project Team &bull; Innovating the Future</p>
+      <div class="scroll-indicator">
+        <span>SCROLL TO EXPLORE</span>
+        <div class="scroll-arrow">
+          <div class="arrow-inner"></div>
+        </div>
+      </div>
+    </div>
+    <!-- HUD corner decorations -->
+    <div class="hud hud-tl"></div>
+    <div class="hud hud-tr"></div>
+    <div class="hud hud-bl"></div>
+    <div class="hud hud-br"></div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="team-section" id="team">
+    <div class="section-header">
+      <div class="section-tag">◈ PERSONNEL DATABASE ◈</div>
+      <h2 class="section-title">MEET THE <span class="accent">TEAM</span></h2>
+      <p class="section-sub">Click on a member card to access their profile</p>
+    </div>
+
+    <div class="team-grid">
+
+      <!-- Member 1 -->
+      <div class="member-card" data-member="0" tabindex="0" role="button" aria-label="View Mark Dwayne profile">
+        <div class="card-scanline"></div>
+        <div class="card-glow"></div>
+        <div class="card-border-anim"></div>
+        <div class="card-inner">
+          <div class="card-id">[ ID:001 ]</div>
+          <div class="avatar-wrapper">
+            <div class="avatar-ring"></div>
+            <div class="avatar-ring ring2"></div>
+            <img src="https://ui-avatars.com/api/?name=Mark+Dela+Cruz&background=0a0e1a&color=00f0ff&size=200&bold=true&format=png" alt="Mark Dwayne" class="avatar-img" />
+            <div class="avatar-overlay"></div>
+          </div>
+          <div class="card-info">
+            <h3 class="member-name">MARK DWAYNE</h3>
+            <p class="member-surname">DELA CRUZ</p>
+            <span class="member-role">UI UX Designer</span>
+          </div>
+          <div class="card-footer">
+            <span class="card-tag">▶ VIEW PROFILE</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Member 2 -->
+      <div class="member-card" data-member="1" tabindex="0" role="button" aria-label="View Yhvhan Suba profile">
+        <div class="card-scanline"></div>
+        <div class="card-glow"></div>
+        <div class="card-border-anim"></div>
+        <div class="card-inner">
+          <div class="card-id">[ ID:002 ]</div>
+          <div class="avatar-wrapper">
+            <div class="avatar-ring"></div>
+            <div class="avatar-ring ring2"></div>
+            <img src="https://ui-avatars.com/api/?name=Yhvhan+Suba&background=0a0e1a&color=00f0ff&size=200&bold=true&format=png" alt="Yhvhan Suba" class="avatar-img" />
+            <div class="avatar-overlay"></div>
+          </div>
+          <div class="card-info">
+            <h3 class="member-name">YHVHAN</h3>
+            <p class="member-surname">SUBA</p>
+            <span class="member-role">Backend Developer</span>
+          </div>
+          <div class="card-footer">
+            <span class="card-tag">▶ VIEW PROFILE</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Member 3 -->
+      <div class="member-card" data-member="2" tabindex="0" role="button" aria-label="View Kyle Zoleta profile">
+        <div class="card-scanline"></div>
+        <div class="card-glow"></div>
+        <div class="card-border-anim"></div>
+        <div class="card-inner">
+          <div class="card-id">[ ID:003 ]</div>
+          <div class="avatar-wrapper">
+            <div class="avatar-ring"></div>
+            <div class="avatar-ring ring2"></div>
+            <img src="https://ui-avatars.com/api/?name=Kyle+Zoleta&background=0a0e1a&color=00f0ff&size=200&bold=true&format=png" alt="Kyle Zoleta" class="avatar-img" />
+            <div class="avatar-overlay"></div>
+          </div>
+          <div class="card-info">
+            <h3 class="member-name">KYLE</h3>
+            <p class="member-surname">ZOLETA</p>
+            <span class="member-role">Backend Developer</span>
+          </div>
+          <div class="card-footer">
+            <span class="card-tag">▶ VIEW PROFILE</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Member 4 -->
+      <div class="member-card" data-member="3" tabindex="0" role="button" aria-label="View Harry Lagto profile">
+        <div class="card-scanline"></div>
+        <div class="card-glow"></div>
+        <div class="card-border-anim"></div>
+        <div class="card-inner">
+          <div class="card-id">[ ID:004 ]</div>
+          <div class="avatar-wrapper">
+            <div class="avatar-ring"></div>
+            <div class="avatar-ring ring2"></div>
+            <img src="https://ui-avatars.com/api/?name=Harry+Lagto&background=0a0e1a&color=00f0ff&size=200&bold=true&format=png" alt="Harry Lagto" class="avatar-img" />
+            <div class="avatar-overlay"></div>
+          </div>
+          <div class="card-info">
+            <h3 class="member-name">HARRY</h3>
+            <p class="member-surname">LAGTO</p>
+            <span class="member-role">Front End Developer</span>
+          </div>
+          <div class="card-footer">
+            <span class="card-tag">▶ VIEW PROFILE</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Member 5 -->
+      <div class="member-card" data-member="4" tabindex="0" role="button" aria-label="View Bruce Cuevas profile">
+        <div class="card-scanline"></div>
+        <div class="card-glow"></div>
+        <div class="card-border-anim"></div>
+        <div class="card-inner">
+          <div class="card-id">[ ID:005 ]</div>
+          <div class="avatar-wrapper">
+            <div class="avatar-ring"></div>
+            <div class="avatar-ring ring2"></div>
+            <img src="https://ui-avatars.com/api/?name=Bruce+Cuevas&background=0a0e1a&color=00f0ff&size=200&bold=true&format=png" alt="Bruce Cuevas" class="avatar-img" />
+            <div class="avatar-overlay"></div>
+          </div>
+          <div class="card-info">
+            <h3 class="member-name">BRUCE</h3>
+            <p class="member-surname">CUEVAS</p>
+            <span class="member-role">Front End Developer</span>
+          </div>
+          <div class="card-footer">
+            <span class="card-tag">▶ VIEW PROFILE</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Member 6 -->
+      <div class="member-card" data-member="5" tabindex="0" role="button" aria-label="View David Jamandre profile">
+        <div class="card-scanline"></div>
+        <div class="card-glow"></div>
+        <div class="card-border-anim"></div>
+        <div class="card-inner">
+          <div class="card-id">[ ID:006 ]</div>
+          <div class="avatar-wrapper">
+            <div class="avatar-ring"></div>
+            <div class="avatar-ring ring2"></div>
+            <img src="https://ui-avatars.com/api/?name=David+Jamandre&background=0a0e1a&color=00f0ff&size=200&bold=true&format=png" alt="David Jamandre" class="avatar-img" />
+            <div class="avatar-overlay"></div>
+          </div>
+          <div class="card-info">
+            <h3 class="member-name">DAVID</h3>
+            <p class="member-surname">JAMANDRE</p>
+            <span class="member-role">Project Manager</span>
+          </div>
+          <div class="card-footer">
+            <span class="card-tag">▶ VIEW PROFILE</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-line"></div>
+    <div class="footer-content">
+      <div class="footer-logo">SYNCRA</div>
+      <p class="footer-text">National University Manila &bull; Capstone Project</p>
+      <p class="footer-copy">&copy; 2026 SYNCRA. All rights reserved.</p>
+    </div>
+    <div class="hud hud-bl" style="opacity:0.3"></div>
+    <div class="hud hud-br" style="opacity:0.3"></div>
+  </footer>
+
+  <!-- Modal Overlay -->
+  <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalName">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-container" id="modalContainer">
+      <div class="modal-hud modal-hud-tl"></div>
+      <div class="modal-hud modal-hud-tr"></div>
+      <div class="modal-hud modal-hud-bl"></div>
+      <div class="modal-hud modal-hud-br"></div>
+
+      <button class="modal-close" id="modalClose" aria-label="Close profile">✕</button>
+
+      <div class="modal-scanlines"></div>
+
+      <div class="modal-header">
+        <div class="modal-avatar-wrap">
+          <div class="modal-avatar-ring"></div>
+          <div class="modal-avatar-ring ring2"></div>
+          <img src="" alt="" class="modal-avatar" id="modalAvatar" />
+          <div class="modal-avatar-overlay"></div>
+        </div>
+        <div class="modal-title-block">
+          <div class="modal-id" id="modalId">[ ID:001 ]</div>
+          <h2 class="modal-name" id="modalName">NAME</h2>
+          <p class="modal-role" id="modalRole">Role</p>
+          <div class="modal-status">
+            <span class="status-dot"></span>
+            <span>ACTIVE MEMBER</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-divider">
+        <span class="line"></span><span class="diamond">◆</span><span class="line"></span>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-grid">
+          <div class="info-block">
+            <span class="info-label">◈ AGE</span>
+            <span class="info-value" id="modalAge">20</span>
+          </div>
+          <div class="info-block">
+            <span class="info-label">◈ SCHOOL</span>
+            <span class="info-value" id="modalSchool">National University Manila</span>
+          </div>
+          <div class="info-block">
+            <span class="info-label">◈ ROLE</span>
+            <span class="info-value" id="modalRoleDetail">UI UX Designer</span>
+          </div>
+          <div class="info-block">
+            <span class="info-label">◈ STATUS</span>
+            <span class="info-value status-green">Active</span>
+          </div>
+        </div>
+
+        <div class="modal-bio-block">
+          <span class="info-label">◈ BIO</span>
+          <p class="info-bio" id="modalBio">—</p>
+        </div>
+
+        <div class="modal-links">
+          <span class="info-label">◈ CONNECT</span>
+          <div class="links-row">
+            <a href="#" class="link-btn" id="modalLinkedIn" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              LINKEDIN
+            </a>
+            <a href="#" class="link-btn" id="modalGitHub" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              GITHUB
+            </a>
+            <a href="#" class="link-btn" id="modalEmail" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              EMAIL
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
