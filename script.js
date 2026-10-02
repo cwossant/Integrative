@@ -38,7 +38,7 @@ const MEMBERS = [
     email:     'mailto:#',
     // To use a real photo, replace the placeholder below with the image path or URL.
     // Example: photo: 'photos/yhvhan.jpg'
-    photo:     img/suba.jpeg,
+    photo:     'img/suba.jpeg',
     avatarSeed:'Yhvhan+Suba',
   },
   {
@@ -55,7 +55,7 @@ const MEMBERS = [
     email:     'mailto:#',
     // To use a real photo, replace the placeholder below with the image path or URL.
     // Example: photo: 'photos/kyle.jpg'
-    photo:     img/zoleta.jpeg,
+    photo:     'img/zoleta.jpeg',
     avatarSeed:'Kyle+Zoleta',
   },
   {
@@ -72,7 +72,7 @@ const MEMBERS = [
     email:     'mailto:#',
     // To use a real photo, replace the placeholder below with the image path or URL.
     // Example: photo: 'photos/harry.jpg'
-    photo:     img/lagto.jpeg,
+    photo:     'img/lagto.jpeg',
     avatarSeed:'Harry+Lagto',
   },
   {
@@ -89,7 +89,7 @@ const MEMBERS = [
     email:     'mailto:#',
     // To use a real photo, replace the placeholder below with the image path or URL.
     // Example: photo: 'photos/bruce.jpg'
-    photo:     img/bruce.jpeg,
+    photo:     'img/bruce.jpeg',
     avatarSeed:'Bruce+Cuevas',
   },
   {
@@ -106,7 +106,7 @@ const MEMBERS = [
     email:     'mailto:#',
     // To use a real photo, replace the placeholder below with the image path or URL.
     // Example: photo: 'photos/david.jpg'
-    photo:     img/david.jpeg,
+    photo:     'img/david.jpeg',
     avatarSeed:'David+Jamandre',
   },
 ];
